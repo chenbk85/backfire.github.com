@@ -1,0 +1,20 @@
+time : 2011-12-09
+Version : 2.0.0
+feature :
+1.增加切换运行账户的功能
+2.将listen和export线程共享的hash_table合并为一个
+3.增加command进程
+4.增加共享内存与加锁队列
+bugfix :
+1.修复hash_table无限扩容，占用内存过大的bug
+2.修复检查更新次数过多的bug
+todo : 
+1.command进程执行shell命令或加载so执行命令
+
+time : 2012-3-8 16:52:43
+Version : 2.1.0
+featurn :
+1.支持以so方式执行命令
+2.自动更新功能测试正常
+todo :
+1.express线程有潜在的无响应
