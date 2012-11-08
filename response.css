@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+*{margin:0;padding:0;}
+
+@media only screen and (max-width:1680px){
+	#header .inner{background:#f00;border:1px solid #000}
+}
+
+@media only screen and (max-width:1280px){
+	#header .inner{background:#000;border:1px solid #f00}
+
+}
+
+@media only screen and (max-width:1024px){
+	#header .inner{background:#ff0;border:1px solid #000}
+}
