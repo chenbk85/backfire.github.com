@@ -1,5 +1,0 @@
-// column权限的定义
-DB_MGR_COLUMN_PRIV(Select)
-DB_MGR_COLUMN_PRIV(Insert)
-DB_MGR_COLUMN_PRIV(Update)
-DB_MGR_COLUMN_PRIV(References)

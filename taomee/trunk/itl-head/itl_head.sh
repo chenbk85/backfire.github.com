@@ -1,1 +1,0 @@
-../bin/all_server.sh
