@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/smyang/output'
+let g:netrw_dirhist_2='/home/smyang/log'
+let g:netrw_dirhist_3='/home/smyang/workspace/hadoop/test/classes'
+let g:netrw_dirhist_4='/usr/share/hadoop'
+let g:netrw_dirhist_5='/home/smyang/workspace/hadoop/test/work/input'
+let g:netrw_dirhist_6='/home/smyang/workspace/weiciyuan/res'
+let g:netrw_dirhist_7='/home/smyang/workspace/hadoop/trunk/ads/mapred/src/topics/active'
+let g:netrw_dirhist_8='/home/smyang/workspace/hadoop/trunk/ads/mapred/src/test'
+let g:netrw_dirhist_9='/home/smyang/workspace/backfire.github.com/.git'

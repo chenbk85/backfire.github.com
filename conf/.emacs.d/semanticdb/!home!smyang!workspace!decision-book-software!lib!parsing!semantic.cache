@@ -1,0 +1,308 @@
+;; Object parsing/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "parsing/"
+  :tables (list 
+   (semanticdb-table "dstring.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("DSTRING_H" variable (:constant-flag t) nil [250 259])
+            ("iostream" include (:system-flag t) nil [261 280])
+            ("string_container.h" include nil nil [282 311])
+            ("dstring" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [329 336])
+                    ("dstring" function
+                       (:constructor-flag t
+                        :type ("dstring" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [339 362])
+                    ("dstring" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [374 388]))                          
+                        :type ("dstring" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [366 420])
+                    ("dstring" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [441 462]))                          
+                        :type ("explicit" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [424 502])
+                    ("<" function
+                       (:operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("a" variable
+                               (:constant-flag t
+                                :type ("dstring" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [530 546])
+                            ("b" variable
+                               (:constant-flag t
+                                :type ("dstring" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [547 563]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [506 593])
+                    ("==" function
+                       (:operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("a" variable
+                               (:constant-flag t
+                                :type ("dstring" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [622 638])
+                            ("b" variable
+                               (:constant-flag t
+                                :type ("dstring" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [639 655]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [597 686])
+                    ("!=" function
+                       (:operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("a" variable
+                               (:constant-flag t
+                                :type ("dstring" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [717 733])
+                            ("b" variable
+                               (:constant-flag t
+                                :type ("dstring" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [734 750]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [692 781])
+                    ("get_no" function (:type "unsigned int") (reparse-symbol classsubparts) [787 833])
+                    ("set" function
+                       (:arguments 
+                          ( ("_no" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [848 861]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [839 881])
+                    ("empty" function (:type "bool") (reparse-symbol classsubparts) [887 931])
+                    ("as_string" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [937 1027])
+                    ("protected" label nil (reparse-symbol classsubparts) [1031 1041])
+                    ("no" variable (:type "unsigned int") (reparse-symbol classsubparts) [1044 1056]))                  
+                :type "class")
+                nil [313 1059])
+            ("<" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("a" variable
+                       (:constant-flag t
+                        :type ("dstring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1078 1094])
+                    ("b" variable
+                       (:constant-flag t
+                        :type ("dstring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1095 1111]))                  
+                :type "bool")
+                nil [1061 1112])
+            ("<<" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("out" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1140 1158])
+                    ("a" variable
+                       (:constant-flag t
+                        :type ("dstring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1159 1175]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [1113 1176]))          
+    :file "dstring.h"
+    :pointmax 1185
+    :fsize 1184
+    :lastmodtime '(18379 8771)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DSTRING_H")
+          )
+
+    )
+   (semanticdb-table "string_container.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("STRING_CONTAINER_H" variable (:constant-flag t) nil [259 277])
+            ("list" include (:system-flag t) nil [279 294])
+            ("ext/hash_map" include (:system-flag t) nil [296 319])
+            ("hash_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [340 354]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [321 355])
+            ("string_ptrt" type
+               (:members 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [380 394])
+                    ("c_str" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [400 447])
+                    ("string_ptrt" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("_s" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [474 489]))                          
+                        :type ("explicit" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [453 503])
+                    ("==" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("a" variable
+                               (:constant-flag t
+                                :type ("string_ptrt" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [530 550])
+                            ("b" variable
+                               (:constant-flag t
+                                :type ("string_ptrt" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [551 571]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [507 572]))                  
+                :type "struct")
+                nil [357 575])
+            ("==" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("a" variable
+                       (:constant-flag t
+                        :type ("string_ptrt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [593 613])
+                    ("b" variable
+                       (:constant-flag t
+                        :type ("string_ptrt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [614 634]))                  
+                :type "bool")
+                nil [577 635])
+            ("string_ptr_hash" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [661 668])
+                    ("()" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:constant-flag t
+                                :type ("string_ptrt" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [689 709]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [671 744]))                  
+                :type "class")
+                nil [637 747])
+            ("string_containert" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [775 782])
+                    ("[]" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [805 819]))                          
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [785 846])
+                    ("string_containert" function
+                       (:constructor-flag t
+                        :type ("string_containert" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [852 942])
+                    ("string" function
+                       (:constant-flag t
+                        :arguments 
+                          ( ("no" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [974 986]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [948 1031])
+                    ("c_str" function
+                       (:pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("no" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1055 1067]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [1037 1112])
+                    ("protected" label nil (reparse-symbol classsubparts) [1116 1126])
+                    ("hash_tablet" type
+                       (:typedef ("__gnu_cxx::hash_map" type
+                             (:template-specifier 
+                                ( ("string_ptrt" type nil nil nil)
+                                  ("unsigned int" type nil nil nil)
+                                  ("string_ptr_hash" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "__gnu_cxx::hash_map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1129 1209])
+                    ("hash_table" variable (:type ("hash_tablet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1212 1235])
+                    ("get" function
+                       (:arguments 
+                          ( ("s" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1254 1268]))                          
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [1241 1685])
+                    ("string_listt" type
+                       (:typedef ("std::list" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::list"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1691 1735])
+                    ("string_list" variable (:type ("string_listt" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1738 1763])
+                    ("string_vectort" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::vector"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1769 1819])
+                    ("string_vector" variable (:type ("string_vectort" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1822 1851]))                  
+                :type "class")
+                nil [749 1854])
+            ("string_container" variable
+               (:typemodifiers ("extern")
+                :type ("string_containert" type (:type "class") nil nil))
+                nil [1856 1898]))          
+    :file "string_container.h"
+    :pointmax 1907
+    :fsize 1906
+    :lastmodtime '(18379 8771)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("STRING_CONTAINER_H")
+          )
+
+    )
+   )
+  :file "!home!smyang!workspace!decision-book-software!lib!parsing!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )
