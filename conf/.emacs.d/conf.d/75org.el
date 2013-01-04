@@ -1,11 +1,11 @@
-;; 最后更新: 2010年1月13日 20:34:42 by smyang
+;; 最后更新: 2013年1月4日 17:38:35 by smyang
 
 (setq org-hide-leading-stars t)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done 'time)
 
 (defcustom org-export-html-style
-"<link rel=\"stylesheet\" type=\"text/css\" href=\"http://10.1.1.28/smyang/base.css\">" ""
+"<link rel=\"stylesheet\" type=\"text/css\" href=\"./base.css\">" ""
   :group 'org-export-html
   :type 'string)
 
