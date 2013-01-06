@@ -1,0 +1,72 @@
+
+10.1.1.6    svn.taomee.com
+192.168.6.98 itl.taomee.com
+
+
+
+10.1.1.27   url.taomee.net  # 流量统计系统
+10.1.1.27   sso.taomee.net  # 统一登录
+10.1.1.27   home.taomee.net # 统一登录
+10.1.1.27   user.taomee.net # 权限系统
+10.1.1.27   itl.taomee.net  # 运维平台
+10.1.1.27   data.taomee.net # 数据中心
+
+202.38.64.3 bbs.ustc.edu.cn
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+
+# google picasa
+203.208.39.104 	picadaweb.google.com
+203.208.39.104 	lh1.ggpht.com
+203.208.39.104 	lh2.ggpht.com
+203.208.39.104 	lh3.ggpht.com
+203.208.39.104 	lh4.ggpht.com
+203.208.39.104 	lh5.ggpht.com
+203.208.39.104 	lh6.ggpht.com
+
+
+# google ipv6
+2404:6800:8002::63 google.com
+2404:6800:8002::63 ipv6.google.com
+2404:6800:8002::63 www.google.com
+2404:6800:8002::63 mail.google.com
+2404:6800:8002::63 ditu.google.com
+2404:6800:8002::63 code.google.com
+2404:6800:8002::63 knol.google.com
+2404:6800:8002::63 docs.google.com
+2404:6800:8002::63 maps.google.com
+2404:6800:8002::63 news.google.com
+2404:6800:8002::63 wave.google.com
+2404:6800:8002::63 tbn0.google.com 
+2404:6800:8002::63 tbn1.google.com
+2404:6800:8002::63 tbn2.google.com
+2404:6800:8002::63 tbn3.google.com
+2404:6800:8002::63 tbn4.google.com
+2404:6800:8002::63 tbn5.google.com
+2404:6800:8002::63 sites.google.com
+2404:6800:8002::63 video.google.com
+2404:6800:8002::63 chrome.google.com
+2404:6800:8002::63 reader.google.com
+2404:6800:8002::63 picasa.google.com
+2404:6800:8002::63 images.google.com
+2404:6800:8002::63 groups.google.com
+2404:6800:8002::63 scholar.google.com
+2404:6800:8002::63 clients1.google.com
+2404:6800:8002::63 sketchup.google.com
+2404:6800:8002::63 picasaweb.google.com
+2404:6800:8002::63 translate.google.com
+2404:6800:8002::63 dictionary.google.com
+2404:6800:8002::63 blogsearch.google.com
+2404:6800:8002::63 googlevideo.com
+2404:6800:8002::63 ggpht.com
+
+
+127.0.0.1	localhost
+127.0.1.1	smyang-desktop
+
