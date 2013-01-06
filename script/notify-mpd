@@ -1,0 +1,5 @@
+#!/bin/bash
+
+STAT=$(mpc)
+
+notify-send "$STAT"

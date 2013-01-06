@@ -1,0 +1,42 @@
+#!/bin/sh
+### my view picture or open the url script used in pcmanx
+### author: zhan@ustc and plex@ustc
+
+IMGVIEWER="display -resize '1024x768>'"
+URLOPENER="x-www-browser"
+DOWNLOADER="axel"
+SAVEDIR="/tmp/bbspic"
+
+# echo $1
+
+FILETYPE=$(echo $1 | tr A-Z a-z | sed -e 's/.*.jpg$/IMAGE/' -e 's/.*.png$/IMAGE/' -e 's/.*.gif$/IMAGE/' -e 's/.*.bmp$/IMAGE/')
+
+USTCBBS=$(echo $1 | sed -e 's/.*.ustc.edu.cn.*./USTCBBS/')
+
+if [ x$USTCBBS = xUSTCBBS ]; then
+    IMGLINK=$(echo $1 | sed -e 's/\(.*\)sf?s=........&\(.*\)/\1dn?\2/')
+    FILENAME=$(echo $IMGLINK | sed -e 's/.*=\(.*\)/\1/')
+else
+    IMGLINK=$1
+    FILENAME=$(echo $IMGLINK | sed -e 's/.*\/\(.*\)/\1/')
+fi
+
+if [ -f $SAVEDIR"/"$FILENAME ]; then
+    TMPNAME=$(mktemp --tmpdir=$SAVEDIR $(echo $FILENAME | sed 's/\(.*\)\.[^.]*/\1/g')".XXX")
+    FILENAME=$TMPNAME"."$(echo $FILENAME | sed 's/.*\.\([^.]*\)/\1/g')
+else
+    FILENAME=$SAVEDIR"/"$FILENAME
+fi
+
+if [ x$FILETYPE = xIMAGE ]; then
+    if [ -d $SAVEDIR ]; then
+        $DOWNLOADER $IMGLINK -o $FILENAME
+	$IMGVIEWER $FILENAME
+    else
+        mkdir $SAVEDIR
+	$DOWNLOADER $IMGLINK -o $FILENAME
+	$IMGVIEWER $FILENAME
+    fi
+else
+    $URLOPENER $1
+fi
