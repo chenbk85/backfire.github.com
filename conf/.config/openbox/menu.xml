@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+
+  <item label="Desktop">
+    <action name="ToggleShowDesktop"/>
+  </item>
+
+  <menu id = "net-menu" label = "Net">
+
+    <item label="iceweasel">
+      <action name="Execute"><execute>iceweasel</execute></action>
+    </item>
+
+    <item label="chrome">
+      <action name="Execute"><execute>google-chrome</execute></action>
+    </item>
+    <item label="PCManX">
+      <action name="Execute"><execute>pcmanx</execute></action>
+    </item>
+
+    <!-- <item label="Tsclient"> -->
+    <!--   <action name="Execute"><execute>tsclient</execute></action> -->
+    <!-- </item> -->
+
+    <!-- <item label="Fetion"> -->
+    <!--   <action name="Execute"><execute>linux-fetion</execute></action> -->
+    <!-- </item> -->
+
+    <item label="pidgin">
+      <action name="Execute"><execute>pidgin</execute></action>
+    </item>
+
+    <!-- <item label="WebQQ"> -->
+    <!--   <action name="Execute"><execute>prism -override ~/.webapps/webqq@prism.app/override.ini -webapp webqq@prism.app</execute></action> -->
+    <!-- </item> -->
+
+    <!-- <item label="Opera"> -->
+    <!--   <action name="Execute"><execute>opera</execute></action> -->
+    <!-- </item> -->
+
+  </menu>
+
+  <menu id = "media-menu" label = "Media">
+
+    <item label="SMPlayer">
+      <action name="Execute"><execute>smplayer</execute></action>
+    </item>
+
+    <item label="VLC">
+      <action name="Execute"><execute>vlc</execute></action>
+    </item>
+
+  </menu>
+
+  <menu id = "tool-menu" label = "Tool">
+
+    <item label="GoldedDict">
+      <action name="Execute"><execute>goldendict</execute></action>
+    </item>
+
+    <item label="VirtualBox">
+      <action name="Execute"><execute>VirtualBox</execute></action>
+    </item>
+
+  </menu>
+
+  <item label="tilda">
+    <action name="Execute"><execute>tilda</execute></action>
+  </item>
+
+  <item label="Rox">
+    <action name="Execute"><execute>rox</execute></action>
+  </item>
+
+  <item label="Emacs">
+    <action name="Execute"><execute>emacs</execute></action>
+  </item>
+
+  <!-- This requires the presence of the 'menu' package to work -->
+  <!-- <menu id="Debian" /> -->
+  <separator />
+  <menu id="client-list-menu" />
+  <separator />
+
+  <menu id="openbox-menu" label="OpenBox">
+
+    <item label="Confiugure">
+      <action name="Execute"><execute>obconf</execute></action>
+    </item>
+    
+    <item label="Refresh">
+      <action name="Reconfigure" />
+    </item>
+    
+    <item label="Restart">
+      <action name="Restart" />
+    </item>
+
+    <item label="Exit">
+      <action name="Exit" />
+    </item>
+
+    <separator />
+
+    <item label="Edit menu">
+      <action name="Execute">
+        <execute>gvim ~/.config/openbox/menu.xml</execute>
+      </action>
+    </item>
+
+    <item label="Edit rc">
+      <action name="Execute">
+        <execute>gvim ~/.config/openbox/rc.xml</execute>
+      </action>
+    </item>
+
+    <item label="Edit autostart">
+      <action name="Execute">
+        <execute>gvim ~/.config/openbox/autostart.sh</execute>
+      </action>
+    </item>
+
+    <item label="Edit bashrc">
+      <action name="Execute">
+        <execute>gvim ~/.bashrc</execute>
+      </action>
+    </item>
+
+  </menu>
+
+  <!-- <menu id="system-menu" label="System"> -->
+
+
+  <!--   <item label="Reboot"> -->
+  <!--     <action name="Execute"> -->
+  <!--       <execute>gksu '/sbin/reboot'</execute> -->
+  <!--     </action> -->
+  <!--   </item> -->
+
+  <!--   <item label="Shutdown"> -->
+  <!--     <action name="Execute"> -->
+  <!--       <execute>gksu '/sbin/shutdown -h now'</execute> -->
+  <!--     </action> -->
+  <!--   </item> -->
+
+  <!-- </menu> -->
+
+    <item label="Lock">
+      <action name="Execute">
+        <execute>slock</execute>
+      </action>
+    </item>
+    
+
+</menu>
+
+</openbox_menu>
