@@ -1,10 +1,1 @@
-if exists("afterpage_package_file")
-	finish
-endif
-let afterpage_package_file = 1
-
-let g:TeX_package_option_afterpage = ''
-
-let g:TeX_package_afterpage = 'bra:afterpage'
-
-" vim:ft=vim:ff=unix:
+/usr/share/vim/addons/ftplugin/latex-suite/packages/afterpage

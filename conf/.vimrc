@@ -2,13 +2,13 @@
 " Last Update: 2011-09-11
 
 " 使用主题
-colorscheme smyang 
+colorscheme smyang
 
 " 字体设置
 set guifont=Monaco\ 10
 set guifontwide=WenQuanYi\ Micro\ Hei\ 10 
 
-" 比较习惯用;作为命令前缀，右手小拇指直接能按到
+" 比较习惯用,作为命令前缀，右手小拇指直接能按到
 let mapleader = ","
 " 把空格键映射成:
 nmap <space> :
@@ -16,10 +16,6 @@ nmap <space> :
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
-" 保存文件
-nmap <leader>ww :w!<cr>
-" ^z快速进入shell
-nmap <C-Z> :ConqueTerm bash<cr>
 
 " 判断是终端还是gvim
 if has("gui_running")
@@ -55,7 +51,6 @@ set cindent         " C/C++风格缩进
 set wildmenu         
 set nofen
 set fdl=10
-" set guioptions-=m
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
@@ -85,7 +80,7 @@ function! CurDir()
     let curdir = substitute(getcwd(), $HOME, "~", "g")
     return curdir
 endfunction
-set statusline=[%n]\ %f%m%r%h\ \|\ \ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{hostname()}\ 
+set statusline=[%n]\ %f%m%r%h\ \|\ %{CurDir()}\ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{hostname()}\ 
 
 " 第80列往后加下划线
 "au BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 80 . 'v.\+', -1)
@@ -108,8 +103,6 @@ endfunction
 vnoremap <silent> * :call VisualSearch('f')<CR>
 vnoremap <silent> # :call VisualSearch('b')<CR>
 
-" 在文件名上按gf时，在新的tab中打开
-"map gf :tabnew <cfile><cr>
 
 " 快捷打开编辑vimrc文件的键盘绑定
 map <silent> <leader>ee :e $HOME/.vimrc<cr>
@@ -141,6 +134,12 @@ nmap <leader>cn :cn<cr>
 nmap <leader>cp :cp<cr>
 nmap <leader>cw :cw 10<cr>
 
+" vim-addons-manager
+"
+
+
+
+
 " vim-latex
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
@@ -153,12 +152,12 @@ let s:PlugWinSize = 30
 
 " taglist.vim
 " http://www.vim.org/scripts/script.php?script_id=273
-" <leader>t 打开TagList窗口，窗口在右边
+" <leader>t 打开TagList窗口，窗口在左边
 nmap <silent> <leader>t :TlistToggle<cr>
 "let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Show_One_File = 0
 let Tlist_Exit_OnlyWindow = 1 
-let Tlist_Use_Right_Window = 1
+let Tlist_Use_Right_Window = 0
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_GainFocus_On_ToggleOpen = 0
 let Tlist_WinWidth = s:PlugWinSize
@@ -170,9 +169,6 @@ let Tlist_Display_Prototype = 0
 " http://www.vim.org/scripts/script.php?script_id=1218
 " Toggle单行注释/“性感”注释/注释到行尾/取消注释
 map <leader>cc ,c<space>
-map <leader>cs ,cs
-map <leader>c$ ,c$
-map <leader>cu ,cu
 
 " NERD tree
 " http://www.vim.org/scripts/script.php?script_id=1658
@@ -201,8 +197,8 @@ imap <C-L>             <C-X><C-L>
 " 更新ctags和cscope索引
 " href: http://www.vimer.cn/2009/10/把vim打造成一个真正的ide2.html
 " 稍作修改，提取出DeleteFile函数，修改ctags和cscope执行命令
-map <F12> :call Do_CsTag()<cr>
-function! Do_CsTag()
+map <F12> :call Do_cs_tag()<cr>
+function! Do_cs_tag()
     let dir = getcwd()
 
     "先删除已有的tags和cscope文件，如果存在且无法删除，则报错。
@@ -289,3 +285,10 @@ nmap <silent> <Leader>b :BufExplorer<CR>
 "let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------------"
 let g:DoxygenToolkit_authorName="smyang"
 "let g:DoxygenToolkit_licenseTag="My own license" 
+
+" minibufexplorer
+"let g:miniBufExplMapWindowNavVim = 1
+""let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1 
+"let g:miniBufExplSplitBelow = 1
