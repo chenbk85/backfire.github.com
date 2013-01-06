@@ -1,0 +1,8 @@
+set ftp:charset gbk
+set file:charset utf8
+set ftp:passive-mode/202.38.64.22 0
+set ftp:passive-mode/202.38.64.41 0
+alias du "du -h"
+alias grep "grep --color=auto"
+alias .. "cd .."
+alias ltr "ls -tr"

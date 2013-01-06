@@ -1,0 +1,5 @@
+Xft.antialias:		1
+Xft.hinting:		0
+Xft.hintstyle: 		hintmedium
+Emacs.FontBackend:	xft
+Emacs.useXIM:		on

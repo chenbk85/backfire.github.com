@@ -1,0 +1,6 @@
+#!/bin/bash
+
+route add -net 202.38.0.0 netmask 255.255.0.0 gw 211.86.158.2
+#route add -net 210.45.0.0 netmask 255.255.0.0 gw 211.86.158.2
+#route add -net 211.86.0.0 netmask 255.255.0.0 gw 211.86.158.2
+#route add -net 222.195.0.0 netmask 255.255.0.0 gw 211.86.158.2
