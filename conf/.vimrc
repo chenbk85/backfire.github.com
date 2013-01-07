@@ -145,7 +145,8 @@ call vam#ActivateAddons([
             \ 'DoxygenToolkit',
             \ 'grep',
             \ 'genutils',
-            \ 'LaTeX-Suite_aka_Vim-LaTeX'
+            \ 'LaTeX-Suite_aka_Vim-LaTeX',
+            \ 'fakeclip'
             \])
 
 
