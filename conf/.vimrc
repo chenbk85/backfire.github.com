@@ -135,7 +135,18 @@ nmap <leader>cp :cp<cr>
 nmap <leader>cw :cw 10<cr>
 
 " vim-addons-manager
-"
+set runtimepath+=/home/smyang/.vim/addons/vim-addon-manager
+call vam#ActivateAddons([
+            \ 'taglist',
+            \ 'a',
+            \ 'bufexplorer.zip',
+            \ 'The_NERD_Commenter',
+            \ 'The_NERD_tree',
+            \ 'DoxygenToolkit',
+            \ 'grep',
+            \ 'genutils',
+            \ 'LaTeX-Suite_aka_Vim-LaTeX'
+            \])
 
 
 
@@ -292,3 +303,4 @@ let g:DoxygenToolkit_authorName="smyang"
 "let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplModSelTarget = 1 
 "let g:miniBufExplSplitBelow = 1
+
