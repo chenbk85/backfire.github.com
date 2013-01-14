@@ -2,7 +2,10 @@
 " Last Update: 2011-09-11
 
 " 使用主题
-colorscheme smyang
+set t_Co=256
+"colorscheme smyang
+colorscheme molokai
+"let g:molokai_original=1
 
 " 字体设置
 set guifont=Monaco\ 10
@@ -146,8 +149,8 @@ call vam#ActivateAddons([
             \ 'grep',
             \ 'genutils',
             \ 'LaTeX-Suite_aka_Vim-LaTeX',
-            \ 'fakeclip'
-            \])
+            \ 'fakeclip',
+            \ ])
 
 
 
