@@ -1,0 +1,11 @@
+#! /bin/bash
+
+RESULT=`lsof -i:1080 | grep "LISTEN" | wc -l`
+
+if [ $RESULT -gt 0 ]; then
+    exit;
+else
+    sshpass -p 32ed2b3a ssh -vN gfw &
+fi
+
+
