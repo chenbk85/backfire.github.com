@@ -1,7 +1,7 @@
 
 alias mp3='find . -iname "*.mp3" -execdir mid3iconv -e GBK {} \;'
 alias xp='VirtualBox -startvm xp &'
-alias tv49='php ~/build/rtspdump/rtspdump.php -a tcp -r mms://202.38.64.43/tv49 -o - | mplayer -cache 8192 -demuxer asf -'
+alias tv49='php ~/build/rtspdump/rtspdump.php -a tcp -r mms://202.38.64.43/sdtv3 -o - | mplayer -cache 8192 -demuxer asf -'
 
 
 
