@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>实验室网站改进计划</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2010-12-22 18:37:39 CST"/>
+<meta name="author" content="S.M.Yang"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel="stylesheet" type="text/css" href="base.css">
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">实验室网站改进计划</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Publication </a>
+<ul>
+<li><a href="#sec-1_1">1.1 解决方法 </a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 文献管理 </a>
+<ul>
+<li><a href="#sec-2_1">2.1 目的 </a></li>
+<li><a href="#sec-2_2">2.2 思路A </a></li>
+<li><a href="#sec-2_3">2.3 思路B </a></li>
+<li><a href="#sec-2_4">2.4 思路C </a></li>
+<li><a href="#sec-2_5">2.5 比较 </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Publication </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>目前存在的问题是各个小组的Publication都集中在一个页面,且没有分类和排序,检索困难.
+</p>
+
+</div>
+
+<div id="outline-container-1_1" class="outline-3">
+<h3 id="sec-1_1"><span class="section-number-3">1.1</span> 解决方法 </h3>
+<div class="outline-text-3" id="text-1_1">
+
+<p>考虑到工作量不大, 这部分计划重新进行内容添加. 目前在系统中新增了"Paper"类型的内容供创建, 在"Create Content"下选择"Paper"进行内容添加, 提供的字段包括:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">字段</th><th scope="col" class="left">含义</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">Title</td><td class="left">标题</td></tr>
+<tr><td class="left">Author</td><td class="left">作者</td></tr>
+<tr><td class="left">Year</td><td class="left">年份</td></tr>
+<tr><td class="left">Conf</td><td class="left">会议或期刊</td></tr>
+<tr><td class="left">Group</td><td class="left">研究小组</td></tr>
+<tr><td class="left">Keywords</td><td class="left">关键字</td></tr>
+<tr><td class="left">Link</td><td class="left">文件链接</td></tr>
+</tbody>
+</table>
+
+
+<p>
+显示的时候, 针对这一类型的内容创建了根据小组显示的视图(Views), 在现有的三个小组的Book下添加相应Page即可. 如 "~/publications/group/ssl". 视图的显示还没有进行美 化,所以现在还没有加入到Book中.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 文献管理 </h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2_1" class="outline-3">
+<h3 id="sec-2_1"><span class="section-number-3">2.1</span> 目的 </h3>
+<div class="outline-text-3" id="text-2_1">
+
+<p>提供一个实验室内部共享的文献管理系统,实现论文上传,分类检索的功能.
+</p></div>
+
+</div>
+
+<div id="outline-container-2_2" class="outline-3">
+<h3 id="sec-2_2"><span class="section-number-3">2.2</span> 思路A </h3>
+<div class="outline-text-3" id="text-2_2">
+
+<p>利用Drupal本身进行开发. 目前安装了"Biblo"模块,可在登陆后选择"<a href="http://kyhcs.ustcsz.edu.cn/biblio">Biblo</a>"进入. 对现有的Publication进行了导入, 可以按照年份,作者,类型,标题,关键字进行排序,筛选和检索, 支持Bibtex文件导入. 从功能上看,
+能够基本满足我们的需要. 如果采用的话, 需要简化内容添加的界面, 其自带的字段相对来说过于详细了.添加的内容比较局限,如果涉及图片视频等资料只能通过上传附件形式,没有显式的支持.搜索功能不够强.
+</p></div>
+
+</div>
+
+<div id="outline-container-2_3" class="outline-3">
+<h3 id="sec-2_3"><span class="section-number-3">2.3</span> 思路B </h3>
+<div class="outline-text-3" id="text-2_3">
+
+<p>使用DSpace.效果可以见<a href="http://embedded.ustcsz.edu.cn:8080/dspace/">嵌入式系统实验室</a>(<a href="http://embedded.ustcsz.edu.cn:8080/dspace/">http://embedded.ustcsz.edu.cn:8080/dspace/</a>)的页面. 和Drupal相比,DSpace更倾向于内容的分类管理,用户存在感不强,但是对不同类型的文档,如图片,视频的支持更好.
+</p></div>
+
+</div>
+
+<div id="outline-container-2_4" class="outline-3">
+<h3 id="sec-2_4"><span class="section-number-3">2.4</span> 思路C </h3>
+<div class="outline-text-3" id="text-2_4">
+
+<p>自行开发系统.需要涉及的功能包括:
+</p><ol>
+<li>
+可配置的元数据创建, 即提供不同类型内容的创建以及新增类型的功能
+</li>
+<li>
+搜索功能.除了根据年份,作者等信息外,还要能根据用户添加的Tag进行搜索
+</li>
+<li>
+对不同类型文档的处理,如图片,PDF文件,包含多个文件的如HTML,图文混排的文本
+</li>
+<li>
+导入/导出以及附件的处理
+</li>
+</ol>
+
+</div>
+
+</div>
+
+<div id="outline-container-2_5" class="outline-3">
+<h3 id="sec-2_5"><span class="section-number-3">2.5</span> 比较 </h3>
+<div class="outline-text-3" id="text-2_5">
+
+<p>B和C都涉及和现有网站用户资料的整合, 这方面找到一些导出Drupal用户数据到Discuz!的介绍, 应该是可以实现的, 即可以用现有的账号登陆. A是现在看来最简捷的实现, 欠缺的地方在于搜索功能, 准备调研下Drupal搜索功能的开发再具体说明一下.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: S.M.Yang
+</p>
+<p class="date"> Date: 2010-12-22 18:37:39 CST</p>
+<p class="creator">HTML generated by org-mode 7.4 in emacs 24</p>
+</div>
+</div>
+</body>
+</html>

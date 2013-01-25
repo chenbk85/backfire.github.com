@@ -1,0 +1,81 @@
+                               Coq Art
+                               =======
+
+Author: Zhong Zhuang <dyzz@mail.ustc.edu.cn>
+Date: 2009-02-23 12:30:25 
+
+
+Table of Contents
+=================
+1 Everyday Logic(常用逻辑) 
+    1.1 Practical Aspects of Dependent Products (依赖积的实用方面) 
+        1.1.1 the intro tactic 
+        1.1.2 apply 策略 
+    1.2 逻辑连接 
+        1.2.1 合取和析取 
+    1.3 非直谓定义 
+        1.3.1 Leibniz等式 
+        1.3.2 书写Impredicative定义的指导原则 
+    1.4 小结 
+2 实例分析 
+
+
+1 Everyday Logic(常用逻辑) 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  well-typed   合法类型   良型  
+
+1.1 Practical Aspects of Dependent Products (依赖积的实用方面) 
+===============================================================
+
+1.1.1 the intro tactic 
+-----------------------
+  Exercise 5.1   closed statements   封闭声明   闭式  
+
+1.1.2 apply 策略 
+-----------------
+  Head and Final Types   首类型和终极类型   头类型和最终类型   首类型容易误认为first class, 终极类型太过  
+
+1.2 逻辑连接 
+=============
+
+1.2.1 合取和析取 
+-----------------
+  Excercise 5.5 s上   namely   即说   不翻译   
+
+1.3 非直谓定义 
+===============
+
+1.3.1 Leibniz等式 
+------------------
+  标题       Leibniz Equality        Leibniz等式   Leibniz(莱布尼茨)等价  
+  最后一段   cannot be used for...   并运用于      并不能用于             
+
+1.3.2 书写Impredicative定义的指导原则 
+--------------------------------------
+ 倒数第二段   where functions receive...  这里的函数把另一个描述如何使用计算结果的函数作为变量    即函数把另一个描述如何使用其计算结果的函数作为参数  
+
+1.4 小结 
+=========
+  页码   位置                    原文                         翻译                      建议                                                
+    89                           well-typed                   合法类型                  良型                                                
+    91   练习5.1           closed statements            封闭声明                  闭式                                                
+    92                           Head and Final Types         首类型和终极类型          头类型和最终类型                                    
+   104   练习5.5上面一段           namely                       即说                      不翻译                                              
+   106   标题                    Equality                     等式                      相等性                                              
+   113   标题                    Leibniz Equality             Leibniz等式               Leibniz(莱布尼茨)等价                               
+   114   标题5.5.4上面一段       cannot be used for...        并运用于                  并不能用于                                          
+   116   倒数第二段              where functions receive...   这里的函数...        即函数把另一个描述如何使用其计算结果的函数作为参数  
+
+2 实例分析 
+~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+

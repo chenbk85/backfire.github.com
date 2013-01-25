@@ -1,0 +1,48 @@
+Decision Procedure
+* Introduction and Basic Concepts
+** Two Approaches to Formal Reasoning
+1. Deduction
+2. Enumeration
+** Normal Forms
+1. NNF
+   1. Negation Normal Form
+   2. *Monotonicity*. Increasing a satisfied literal set maintains satisfiability
+   3. Every quantifier-free formula with a Boolean structure can be transformed in linear time to NNF
+2. DNF
+   1. Disjunctive Normal Form
+   2. \/(/\...)
+   3. Semantic case-splitting
+3. CNF
+   1. Conjunctive Normal Form
+   2. Every formula with a Boolean structure can be transformed into an equivalent
+      CNF formula, while potentially increasing the size of the formula exponentially.
+      Yet, any propositional formula can also be transformed into an
+      equisatisfiable CNF formula with only a linear increase in the size of the formula.
+      The price to be paid is n new Boolean variables, where n is the number
+      of logical gates in the formula. This transformation is done via Tseitin's
+      encoding(On the complexity of proofs in propositional logics).
+4. Theoretic Point of View
+   1. First-order Logic
+      1. Predicate Logic
+      2. Interpretation
+      3. Presburger arithmetic & Peano arithmetic (multiply)
+   2. Expressiveness & Decidability
+
+* Decision Procedures for Propositional Logic
+** Propsitional Logic
+formula : formula /\ formula | ~formula | (formula) | atom
+
+atom : Boolean-identifier | true | false
+** DPLL framework
+*** State of a clause under an assignment
+1. *satisfied* if one or more of its literals are satisfied
+2. *conflicting* if all of its literals are assigned but not satisfied
+3. *unit* if it is not satisfied and all but one of its literals are assigned
+4. *unresolved* otherwise
+
+  
+
+
+
+
+    

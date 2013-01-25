@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>客户端与服务器通讯协议</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2010-12-22 20:00:34 CST"/>
+<meta name="author" content="S.M.Yang"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel="stylesheet" type="text/css" href="base.css">
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">客户端与服务器通讯协议</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 包结构 </a></li>
+<li><a href="#sec-2">2 包头结构 </a></li>
+<li><a href="#sec-3">3 Research Topic and Background </a></li>
+<li><a href="#sec-4">4 Collaborative Tutors </a></li>
+<li><a href="#sec-5">5 Domestic Research Preparation </a></li>
+<li><a href="#sec-6">6 Training Program During PhD </a></li>
+<li><a href="#sec-7">7 Objective of Studying Abroad </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 包结构 </h2>
+<div class="outline-text-2" id="text-1">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">名称</th><th scope="col" class="left">类型</th><th scope="col" class="left">字节数</th><th scope="col" class="left">说明</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">包头</td><td class="left"></td><td class="left">定长</td><td class="left">消息头</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">包体</td><td class="left"></td><td class="left">不定长</td><td class="left">消息体</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 包头结构 </h2>
+<div class="outline-text-2" id="text-2">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="right" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">名称</td><td class="left">类型</td><td class="right">字节数</td><td class="left">说明</td></tr>
+<tr><td class="left">len</td><td class="left">uint32</td><td class="right">4</td><td class="left">包长度</td></tr>
+<tr><td class="left">type</td><td class="left">uint32</td><td class="right">4</td><td class="left">类型</td></tr>
+<tr><td class="left">user_id</td><td class="left">uint32</td><td class="right">4</td><td class="left">用户米米号</td></tr>
+<tr><td class="left">result</td><td class="left">uint32</td><td class="right">4</td><td class="left"></td></tr>
+<tr><td class="left">err_no</td><td class="left">uint32</td><td class="right">4</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Research Topic and Background </h2>
+<div class="outline-text-2" id="text-3">
+
+<ul>
+<li>
+<b>Topic:</b> <i>Automated Theorem Prover and Implementation</i>
+</li>
+<li>
+<b>Background:</b> Certifying compiler is a way to build high-confidence software. Most of them follow the Hoare-style logic, 
+and verify programs by proving assertions generated by the compiler. These proof can be given by hand or by 
+automated theorem prover(ATP). The difficulties are if we need to verify complicated 
+properties of programs, ATPs nowadays are not capable to deal with and if we need to 
+verify large scale programs, these assertions can be exhausting for human. This research 
+came from the certifying compiler project and operation system kernel verification in our lab and aims at
+automated theorem prover development and programming language support. 
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Collaborative Tutors </h2>
+<div class="outline-text-2" id="text-4">
+
+<p>Prof. Yiyun Chen  Department of Computer Science and Technology, USTC
+Prof. Zhong Shao  Department of Computer Science and Technology, Yale
+</p>
+<p>
+This student has been in the Research Center for High Confidence Software of
+USTC&ndash;Yale. The center is a platform for tutors and graduate students of two
+schools in related fields to carry out collaborative research and strengthen
+academic exchanges, it also enhances the research level for teachers and students
+of USTC.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Domestic Research Preparation </h2>
+<div class="outline-text-2" id="text-5">
+
+<p>In the past two years I have taken charge of a certifying compiler project and developed 
+automated theorem prover for separation logic both in SML/NJ and Coq Proof Assistant. 
+I have accumulated a lot of theoretical and technical foundation from this project.
+</p>
+<p>
+<b>Theoretical Foundation:</b> In the period I have a profound understanding of PCC
+Framework, Certifying Compiler, Certified Compiler, Programming Theory, Hoare Logic, Separation Logic, Decision Procedures and
+Proof Automation. 
+</p>
+<p>
+<b>Technical Foundation:</b> During the work of program verification I benefited with
+a lot of experience and technical foundation, such as decision procedure for separation logic, 
+proof objects generation and proof automation in Coq proof assistant.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Training Program During PhD </h2>
+<div class="outline-text-2" id="text-6">
+
+<ol>
+<li>
+<b>The first year:</b> take charge of the certifying compiler project
+
+</li>
+<li>
+<b>The second year:</b> research topic about more practical ATP for separation logic 
+
+</li>
+<li>
+<b>The third year:</b> study and research in Yale
+
+</li>
+<li>
+<b>After back:</b> finish the PhD. thesis and thesis defense.
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Objective of Studying Abroad </h2>
+<div class="outline-text-2" id="text-7">
+
+<p>I will continue with the research of ATP, and improve current proof automation mechanisms in Coq and 
+programming language support for ATP. During the period that abroad one or two papers about the research results will be
+published on the international conferences or journals.
+</p></div>
+</div>
+<div id="postamble">
+<p class="author"> Author: S.M.Yang
+</p>
+<p class="date"> Date: 2010-12-22 20:00:34 CST</p>
+<p class="creator">HTML generated by org-mode 7.4 in emacs 24</p>
+</div>
+</div>
+</body>
+</html>
