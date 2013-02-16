@@ -2,15 +2,15 @@
 # 使用全角字符
 # 可选值：
 # True False
-FullWidth=False
+#FullWidth=False
 # 使用全角标点
 # 可选值：
 # True False
-WidePunc=True
+#WidePunc=True
 # 输入后联想词组
 # 可选值：
 # True False
-UseRemind=False
+#UseRemind=False
 # 当前输入法名称
 IMName=pinyin
 # 当前启用的输入法列表
@@ -18,5 +18,5 @@ EnabledIMList=fcitx-keyboard-us:True,pinyin:True,shuangpin:False,fcitx-keyboard-
 # 在客户端窗口中显示预编辑字符串
 # 可选值：
 # True False
-PreeditStringInClientWindow=True
+#PreeditStringInClientWindow=True
 
